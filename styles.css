@@ -1,8 +1,12 @@
 :root {
   --white: #FFFFFF;
   --blue-500: #1B85F3;
+  --blue-100: #D1E6FF;
   --gray-800: #39434F;
+  --gray-600: #666687;
   --gray-200: #d9dfe6;
+  --purple-700: #6B46C1;
+  --purple-100: #F2E5FF;
   --background: #2A3240;
   --logo: #2A3240;
 }
@@ -23,6 +27,10 @@ h1, h2, h3, h4 {
   color: var(--gray-800);
 }
 
+h3 {
+  color: var(--gray-600);
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -37,8 +45,8 @@ a {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .title {
@@ -91,7 +99,29 @@ header ul {
 }
 
 main {
-  margin: 100px;
+  margin-top: 100px;
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  li {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+  .breeding {
+    color: var(--blue-500);
+    background-color: var(--blue-100);
+  }
+  .beginner {
+    color: var(--purple-700);
+    background-color: var(--purple-100);
+  }
 }
