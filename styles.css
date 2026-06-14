@@ -9,6 +9,7 @@
   --purple-100: #F2E5FF;
   --background: #2A3240;
   --logo: #2A3240;
+  --dark: #181717;
 }
 
 *, *::before, *::after {
@@ -23,12 +24,90 @@ body {
 
 h1, h2, h3, h4 {
   margin: 0;
-  font-weight: normal;
-  color: var(--gray-800);
+  font-weight: 400;
+  color: var(--dark);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
 }
 
 h3 {
-  color: var(--gray-600);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.subtitle-18 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.subtitle-16 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.caption-regular {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.caption-semibold {
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.body-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  &-medium {
+    font-weight: 500;
+  }
+  &-semibold {
+    font-weight: 600;
+  }
+}
+
+.body-14 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  &-medium {
+    font-weight: 500;
+  }
+  &-semibold {
+    font-weight: 600;
+  }
 }
 
 ul {
@@ -104,6 +183,11 @@ main {
   padding-bottom: 20px;
 }
 
+section {
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+
 .tags {
   display: flex;
   gap: 8px;
@@ -123,5 +207,27 @@ main {
   .beginner {
     color: var(--purple-700);
     background-color: var(--purple-100);
+  }
+}
+
+.meta {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  time {
+    color: var(--gray-600);
+  }
+}
+
+.why-agreement-matters {
+  .point {
+    color: var(--gray-800);
+    padding-left: 4px;
+  }
+  .description {
+    color: var(--gray-700);
+    padding-left: 22px;
+  }
+  li {
+    margin-bottom: 16px;
   }
 }
