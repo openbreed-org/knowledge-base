@@ -69,12 +69,24 @@ h6 {
 }
 
 .subtitle-18 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.subtitle-18-semibold {
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
 }
 
 .subtitle-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.subtitle-16-semibold {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -360,6 +372,21 @@ section {
 
 .checkbox-list ul ul {
   margin-left: 28px;
+}
+
+.download-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 3px var(--blue-500) solid;
+  border-radius: 18px;
+  padding: 16px;
+  cite {
+    color: var(--blue-500);
+  }
+  div {
+    color: var(--gray-600);
+  }
 }
 
 @media (max-width: 576px) {
