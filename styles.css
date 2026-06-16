@@ -238,57 +238,52 @@ section {
   }
 }
 
-.notification-container {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-  .notification {
+.notification {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--purple-500);
+  &.notification_warning {
+    background-color: var(--magenta-300);
+  }
+  & .notification-content-header {
     display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+  }
+  & .notification-content ul {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
-    padding: 16px;
-    border-radius: 24px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--purple-500);
-    &.notification_warning {
-      background-color: var(--magenta-300);
-    }
-    & .notification-content-header {
-      display: flex;
-      align-items: center;
-      justify-items: center;
-      gap: 8px;
-    }
-    & .notification-content ul {
-      padding-top: 16px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    & #risks-list li {
-      display: grid;
-      grid-template-columns: 18px 1fr;
-      column-gap: 8px;
-      row-gap: 4px;
-      & .point {
-        display: contents;
-        & > div {
-          display: flex;
-          align-self: center;
-          flex-shrink: 0;
-          line-height: 0;
-        }
-      }
-      & .description {
-        grid-column: 2;
-        padding-left: 0;
+  }
+  & #risks-list li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    column-gap: 8px;
+    row-gap: 4px;
+    & .point {
+      display: contents;
+      & > div {
+        display: flex;
+        align-self: center;
+        flex-shrink: 0;
+        line-height: 0;
       }
     }
-    ul, li {
-      margin: 0;
+    & .description {
+      grid-column: 2;
+      padding-left: 0;
     }
   }
+  ul, li {
+    margin: 0;
+  }
+}
 
 .svg-wrapper {
   display: flex;
@@ -304,19 +299,14 @@ section {
   }
 }
 
-@media (max-width: 576px) {
-  .notification .notification-content ul  {
-    grid-template-columns: 1fr; 
-    gap: 8px;
-  }
-}
-
 .checkbox-list {
   list-style: none;
   margin: 0;
   padding: 0;
   --checkbox-size: 18px; 
   --checkbox-radius: 8px; 
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .checkbox-list li {
@@ -326,12 +316,12 @@ section {
 .checkbox-list li > div,
 .checkbox-list li:has(> input[type="checkbox"]) {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
 .checkbox-list label {
-  padding: 8px;
+  padding: 4px;
   border-radius: var(--checkbox-radius);
   cursor: pointer;
   transition: background-color .12s ease, box-shadow .12s ease;
@@ -341,9 +331,10 @@ section {
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   margin: 0;
+  margin-top: 4px; 
   flex: 0 0 var(--checkbox-size);
   accent-color: var(--blue-500);
-  border-radius: 6px;
+  border-radius: 8px;
   background-clip: padding-box;
 }
 
@@ -369,4 +360,11 @@ section {
 
 .checkbox-list ul ul {
   margin-left: 28px;
+}
+
+@media (max-width: 576px) {
+  .notification .notification-content ul  {
+    grid-template-columns: 1fr; 
+    gap: 8px;
+  }
 }
