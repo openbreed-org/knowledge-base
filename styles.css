@@ -13,6 +13,7 @@
   --background: #2A3240;
   --magenta-300: #FBE1EA;
   --purple-500: #9F7AEA;
+  --light-green-500: #48BB78;
   --logo: #2A3240;
   --dark: #181717;
 }
@@ -145,12 +146,6 @@ a {
   padding-right: 16px;
 }
 
-.title {
-  position: absolute;
-  top: -50%;
-  right: -150%;
-}
-
 .brand {
   color: var(--logo);
   font-weight: bold;
@@ -166,6 +161,7 @@ header {
   padding-bottom: 4px;
   box-shadow: var(--gray-200) 0px 1px 3px;
   background-color: var(--white);
+  z-index: 99;
 }
 
 header ul {
@@ -386,6 +382,60 @@ section {
   }
   div {
     color: var(--gray-600);
+  }
+}
+
+.payment-verification {
+  dl {
+    padding-top: 8px;
+    padding-bottom: 16px;
+    counter-reset: my-custom-counter;
+  }
+  dt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-800);
+    counter-increment: my-custom-counter; 
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      background-color: var(--gray-200);
+      border-radius: 50%;
+    }
+    &::before {
+      content: counter(my-custom-counter);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 28px;
+      top: -2px;
+      font-weight: 700;
+      font-size: 10px;
+      color: var(--dark); 
+      padding: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: var(--light-green-500);
+    }
+  }
+  dd {
+    padding-left: 8px;
+    color: var(--gray-700);
+  }
+  strong {
+    color: var(--gray-700)
+  }
+  ul {
+    margin: 0;
+    color: var(--gray-600)
   }
 }
 
