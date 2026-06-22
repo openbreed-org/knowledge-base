@@ -429,6 +429,9 @@ section {
   dd {
     padding-left: 8px;
     color: var(--gray-700);
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
   strong {
     color: var(--gray-700)

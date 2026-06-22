@@ -3,5 +3,10 @@ https://www.openbreed.pet/* https://openbreed.pet/:splat 301!
 http://www.openbreed.pet/* https://openbreed.pet/:splat 301!
 http://openbreed.pet/* https://openbreed.pet/:splat 301!
 
+# Exempt static files and essential files from SPA fallback
+/robots.txt  /robots.txt  200
+/sitemap.xml /sitemap.xml 200
+/assets/*    /assets/:splat 200
+
 # SPA fallback: serve index.html for any path on the domain
 /*    /index.html   200
