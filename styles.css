@@ -201,6 +201,13 @@ section {
   padding-bottom: 40px;
 }
 
+.separator {
+  height: 1px;
+  background-color: var(--gray-200);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 .tags {
   display: flex;
   gap: 8px;
@@ -439,6 +446,15 @@ section {
   ul {
     margin: 0;
     color: var(--gray-600)
+  }
+}
+
+footer {
+  padding-bottom: 24px;
+
+  & .description {
+    padding-top: 16px;
+    color: var(--gray-600);
   }
 }
 
